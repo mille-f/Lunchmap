@@ -10,7 +10,7 @@
 
 <br>
 
-<table>
+<table class="table table-striped table hover">
   <thead>
     <tr>
       <th>Category</th>
@@ -23,7 +23,7 @@
   <tbody>
     <% @shops.each do |shop| %>
       <tr>
-        <td><%= shop.category.name %></td>
+        <td><%= shop.category %></td>
         <td><%= shop.name %></td>
         <td><%= shop.address %></td>
         <td><%= link_to 'Show', shop %></td>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Shop', new_shop_path %> <%= link_to 'Show Categories', categories_path %>
+<%= link_to 'New Shop', new_shop_path, class: "btn btn-primary" %> <%= link_to 'Show Categories', categories_path %>
